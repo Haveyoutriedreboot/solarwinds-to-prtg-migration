@@ -1,0 +1,37 @@
+# ======================
+# SolarWinds → PRTG Migration Toolkit
+# .gitignore
+# ======================
+
+# ----- OUTPUT FILES -----
+# Never commit exported node data — contains full network inventory
+*.csv
+*.log
+*.txt
+
+# ----- POWERSHELL -----
+*.ps1xml
+
+# ----- CREDENTIALS / SECRETS -----
+# If you ever store connection details locally, keep them out of git
+*credentials*
+*secrets*
+*password*
+*.cred
+
+# ----- WINDOWS -----
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ----- EDITOR & IDE -----
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ----- TEMP / MISC -----
+*.tmp
+*.bak
+*.swp
+~$*
