@@ -21,9 +21,9 @@ Scripts
 Connects to SolarWinds Orion and exports all monitored nodes to a CSV file.
 Parameters
 Parameter	Required	Description
-`-SwHost`	✅ Yes	Hostname or FQDN of your Orion server
-`-Credential`	❌ No	PSCredential for remote auth. Omit to use Windows auth (`-Trusted`) — only works on the Orion server itself
-`-OutputPath`	❌ No	Full path for the output CSV. Defaults to the script's directory
+`-SwHost` Yes	Hostname or FQDN of your Orion server
+`-Credential`	 No	PSCredential for remote auth. Omit to use Windows auth (`-Trusted`) — only works on the Orion server itself
+`-OutputPath`	 No	Full path for the output CSV. Defaults to the script's directory
 Usage
 ```powershell
 # Remote connection with credentials (recommended)
@@ -83,7 +83,7 @@ n.CustomProperties.Location AS Location
 ```
 Replace `Site` and `Location` with your actual custom property names.
 ---
-⚠️ Security Notes
+Security Notes
 Never commit the exported CSV — it contains your full network inventory. The `.gitignore` in this repo excludes `*.csv` files automatically.
 SNMPv3 secrets are not exported — you must configure authentication keys and privacy keys manually in PRTG after import.
 Run with least privilege — the export only needs read access to Orion. No write permissions required.
